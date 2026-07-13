@@ -1,0 +1,5 @@
+# SportsLabResearch-WIMU-DataExtractor
+# v1.0.0-alpha
+
+# Este proyecto utiliza exclusivamente la librería estándar de Python.
+# No requiere dependencias externas.
