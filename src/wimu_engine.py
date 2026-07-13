@@ -1226,53 +1226,148 @@ def extract_one_file(path: Path) -> Path:
 
 
 def main() -> int:
+    import time
+
+    started_at = time.perf_counter()
+
     try:
         wimu_folder = find_wimu_folder()
         input_files = find_wimu_input_files(wimu_folder)
 
+        print("\n" + "=" * 60)
+        print("SportsLabResearch-WIMU-DataExtractor v1.0.1")
+        print("=" * 60)
+        print(f"\nCarpeta de entrada: {wimu_folder}")
+
         if not input_files:
-            print(f"ERROR: no encontré archivos .qul ni .qui en: {wimu_folder}")
+            print("\nERROR: no se encontraron archivos .qul ni .qui.")
             return 1
 
-        print("\n" + "=" * 60)
-        print("SportsLabResearch-WIMU-DataExtractor v1.0.0")
-        print("=" * 60)
+        print(f"\nArchivos encontrados: {len(input_files)}\n")
+        for index, input_path in enumerate(input_files, start=1):
+            print(f"{index}. {input_path.name}")
 
-        print("\nArchivos encontrados:\n")
-        for i, f in enumerate(input_files, start=1):
-            print(f"{i}. {f.name}")
-
-        print("\n1. Procesar un archivo")
+        print("\n" + "-" * 60)
+        print("1. Procesar un archivo")
         print("2. Procesar varios archivos")
         print("3. Procesar todos los archivos")
         print("0. Salir")
+        print("-" * 60)
 
-        opcion = input("\nSeleccione una opción: ").strip()
+        option = input("\nSeleccione una opción: ").strip()
+        selected_files: List[Path] = []
 
-        if opcion == "0":
+        if option == "0":
+            print("\nProceso cancelado.")
             return 0
-        elif opcion == "1":
-            seleccion = input("Número del archivo: ").strip()
-            archivos = [input_files[int(seleccion)-1]]
-        elif opcion == "2":
-            seleccion = input("Números separados por comas (ej. 1,3,5): ").strip()
-            indices = [int(x.strip())-1 for x in seleccion.split(",")]
-            archivos = [input_files[i] for i in indices]
-        elif opcion == "3":
-            archivos = input_files
+
+        if option == "1":
+            selection = input("\nNúmero del archivo: ").strip()
+            try:
+                selected_index = int(selection)
+            except ValueError:
+                print("\nERROR: debe introducir un número válido.")
+                return 1
+
+            if selected_index < 1 or selected_index > len(input_files):
+                print("\nERROR: el número seleccionado no existe.")
+                return 1
+
+            selected_files = [input_files[selected_index - 1]]
+
+        elif option == "2":
+            selection = input(
+                "\nNúmeros separados por comas (ejemplo: 1,3,5): "
+            ).strip()
+
+            try:
+                selected_indexes = [
+                    int(value.strip())
+                    for value in selection.split(",")
+                    if value.strip()
+                ]
+            except ValueError:
+                print("\nERROR: la selección contiene valores no válidos.")
+                return 1
+
+            if not selected_indexes:
+                print("\nERROR: no se seleccionó ningún archivo.")
+                return 1
+
+            invalid_indexes = [
+                index
+                for index in selected_indexes
+                if index < 1 or index > len(input_files)
+            ]
+            if invalid_indexes:
+                print(
+                    "\nERROR: números no válidos: "
+                    + ", ".join(str(index) for index in invalid_indexes)
+                )
+                return 1
+
+            seen = set()
+            for index in selected_indexes:
+                if index not in seen:
+                    selected_files.append(input_files[index - 1])
+                    seen.add(index)
+
+        elif option == "3":
+            selected_files = list(input_files)
+
         else:
-            print("Opción no válida.")
+            print("\nERROR: opción no válida.")
             return 1
 
-        outputs = []
-        for archivo in archivos:
-            outputs.append(extract_one_file(archivo))
+        print(f"\nArchivos seleccionados: {len(selected_files)}")
+        for selected_file in selected_files:
+            print(f" - {selected_file.name}")
 
-        print("\nArchivos generados:")
-        for out in outputs:
-            print(f" - {out}")
+        confirmation = input("\n¿Continuar? (S/N): ").strip().lower()
+        if confirmation not in {"s", "si", "sí"}:
+            print("\nProceso cancelado.")
+            return 0
 
-        return 0
+        outputs: List[Path] = []
+        errors: List[Tuple[Path, str]] = []
+
+        total = len(selected_files)
+
+        for position, input_path in enumerate(selected_files, start=1):
+            print("\n" + "=" * 60)
+            print(f"[{position}/{total}] {input_path.name}")
+            print("=" * 60)
+
+            try:
+                outputs.append(extract_one_file(input_path))
+            except Exception as exc:
+                errors.append((input_path, str(exc)))
+                print(f"\nERROR en {input_path.name}: {exc}")
+
+        elapsed = int(time.perf_counter() - started_at)
+        hours, remainder = divmod(elapsed, 3600)
+        minutes, seconds = divmod(remainder, 60)
+
+        print("\n" + "=" * 60)
+        print("RESUMEN")
+        print("=" * 60)
+        print(f"\nProcesados: {total}")
+        print(f"Correctos:  {len(outputs)}")
+        print(f"Errores:    {len(errors)}")
+        print(f"Resultados: {output_folder()}")
+        print(f"Tiempo:     {hours:02d}:{minutes:02d}:{seconds:02d}")
+
+        if outputs:
+            print("\nArchivos generados:")
+            for output_path in outputs:
+                print(f" - {output_path.name}")
+
+        if errors:
+            print("\nArchivos con error:")
+            for input_path, error_message in errors:
+                print(f" - {input_path.name}: {error_message}")
+
+        return 0 if not errors else 1
 
     except Exception as exc:
         print(f"\nERROR: {exc}")
