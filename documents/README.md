@@ -17,7 +17,7 @@ GitHub, GitHub Pages and Zenodo.
 ## Resources
 
 - GitHub Repository:
-  https://github.com/SportsLabResearch/SportsLabResearch-WIMU-DataExtractor
+  https://github.com/SportsLabResearch-WIMU-DataExtractor
 
 - Documentation:
   https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/
@@ -34,3 +34,4 @@ SportsLabResearch-WIMU-DataExtractor.
 Zenodo.
 
 https://doi.org/10.5281/zenodo.21344653
+

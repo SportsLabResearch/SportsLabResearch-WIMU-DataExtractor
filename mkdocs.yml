@@ -3,7 +3,7 @@ site_description: Scientific software for extracting, standardizing, and validat
 site_url: https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/
 
 repo_name: SportsLabResearch-WIMU-DataExtractor
-repo_url: https://github.com/SportsLabResearch/SportsLabResearch-WIMU-DataExtractor
+repo_url: https://github.com/SportsLabResearch-WIMU-DataExtractor
 
 theme:
   name: material
@@ -57,3 +57,4 @@ nav:
   - Downloads: downloads.md
   - FAQ: faq.md
   - Changelog: changelog.md
+

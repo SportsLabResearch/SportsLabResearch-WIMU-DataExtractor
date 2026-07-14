@@ -1,4 +1,4 @@
-# Installation
+﻿# Installation
 
 Install SportsLabResearch-WIMU-DataExtractor and prepare the software for use.
 
@@ -17,7 +17,7 @@ Install SportsLabResearch-WIMU-DataExtractor and prepare the software for use.
 Clone the repository:
 
 ```bash
-git clone https://github.com/SportsLabResearch/SportsLabResearch-WIMU-DataExtractor.git
+git clone https://github.com/SportsLabResearch-WIMU-DataExtractor.git
 cd SportsLabResearch-WIMU-DataExtractor
 ```
 

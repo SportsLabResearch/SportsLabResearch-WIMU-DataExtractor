@@ -1,6 +1,6 @@
 # Citation
 
-Cite SportsLabResearch-WIMU-DataExtractor whenever the software contributes to research, data analysis, or scientific publications.
+Cite SportsLabResearch-WIMU-DataExtractor whenever the software contributes to research or scientific publications.
 
 ## Official DOI
 
@@ -8,7 +8,7 @@ https://doi.org/10.5281/zenodo.21344653
 
 ## Recommended Citation
 
-**SportsLabResearch.** *SportsLabResearch-WIMU-DataExtractor*. Version 1.0.0. Zenodo.
+**SportsLabResearch.** *SportsLabResearch-WIMU-DataExtractor*. Version 1.0.0-alpha. Zenodo.
 
 https://doi.org/10.5281/zenodo.21344653
 
@@ -19,15 +19,9 @@ https://doi.org/10.5281/zenodo.21344653
   author    = {SportsLabResearch},
   title     = {SportsLabResearch-WIMU-DataExtractor},
   year      = {2026},
-  version   = {1.0.0},
+  version   = {1.0.0-alpha},
   publisher = {Zenodo},
   doi       = {10.5281/zenodo.21344653},
   url       = {https://doi.org/10.5281/zenodo.21344653}
 }
 ```
-
-## Related Documentation
-
-- Publications
-- Technical Reports
-- Downloads

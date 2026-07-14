@@ -1,0 +1,11 @@
+﻿cff-version: 1.2.0
+message: "Please cite this software using the metadata below."
+title: "SportsLabResearch-WIMU-DataExtractor"
+version: "1.0.0-alpha"
+doi: "10.5281/zenodo.21344653"
+url: "https://github.com/SportsLabResearch-WIMU-DataExtractor"
+repository-code: "https://github.com/SportsLabResearch-WIMU-DataExtractor"
+license: "MIT"
+authors:
+  - name: "JosÃ© Pino-Ortega"
+

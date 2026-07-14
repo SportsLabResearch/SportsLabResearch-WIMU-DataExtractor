@@ -1,30 +1,20 @@
 ﻿# SportsLabResearch-WIMU-DataExtractor
 
-**Scientific software for extracting, standardizing, validating, and analyzing WIMU® performance data.**
-
-## Overview
-
-SportsLabResearch-WIMU-DataExtractor is an open-source application for processing WIMU® performance data through standardized and reproducible workflows.
-
-## Key Features
-
-- Automated extraction of WIMU® datasets
-- Standardization of variables and data structure
-- Validation against SPRO reference exports
-- Excel and Word report generation
-- Reproducible scientific workflows
+High-performance open-source extractor for WIMUÂ® QUL and QUI files.
 
 ## Resources
 
-| Resource | Description |
-|----------|-------------|
-| Repository | Source code and version control |
-| DOI | Permanent scientific citation |
-| Latest Release | Current stable version |
-| Issue Tracker | Bug reports and feature requests |
-| Technical Reports | Scientific and technical documentation |
-| Publications | Related scientific publications |
+| Resource | Link |
+|----------|------|
+| Repository | [SportsLabResearch-WIMU-DataExtractor](https://github.com/SportsLabResearch-WIMU-DataExtractor) |
+| Documentation | [GitHub Pages](https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/) |
+| DOI | [10.5281/zenodo.21344653](https://doi.org/10.5281/zenodo.21344653) |
+| Latest Release | [GitHub Releases](https://github.com/SportsLabResearch-WIMU-DataExtractor/releases) |
+| Issue Tracker | [GitHub Issues](https://github.com/SportsLabResearch-WIMU-DataExtractor/issues) |
 
 ## Citation
 
-Cite the official Zenodo DOI when this software contributes to research or scientific publications.
+Please cite the official Zenodo DOI when using this software:
+
+https://doi.org/10.5281/zenodo.21344653
+

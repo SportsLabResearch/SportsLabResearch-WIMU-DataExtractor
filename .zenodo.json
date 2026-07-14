@@ -1,0 +1,25 @@
+﻿{
+  "title": "SportsLabResearch-WIMU-DataExtractor",
+  "description": "High-performance open-source extractor for WIMUÂ® QUL and QUI files.",
+  "creators": [
+    {
+      "name": "JosÃ© Pino-Ortega"
+    }
+  ],
+  "license": "MIT",
+  "upload_type": "software",
+  "version": "1.0.0-alpha",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/SportsLabResearch-WIMU-DataExtractor",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    },
+    {
+      "identifier": "https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/",
+      "relation": "isDocumentedBy",
+      "scheme": "url"
+    }
+  ]
+}
+
