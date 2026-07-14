@@ -48,3 +48,5 @@ data/output/*
 # Temporary files
 *.tmp
 *.bak
+site/
+docs_backup/

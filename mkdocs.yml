@@ -1,0 +1,59 @@
+﻿site_name: SportsLabResearch-WIMU-DataExtractor
+site_description: Scientific software for extracting, standardizing, and validating WIMU® performance data.
+site_url: https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/
+
+repo_name: SportsLabResearch-WIMU-DataExtractor
+repo_url: https://github.com/SportsLabResearch/SportsLabResearch-WIMU-DataExtractor
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+
+plugins:
+  - search
+
+markdown_extensions:
+  - tables
+  - fenced_code
+  - admonition
+  - attr_list
+  - def_list
+  - md_in_html
+  - pymdownx.highlight
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Installation: installation.md
+  - User Guide:
+      - Introduction: user-guide/index.md
+      - Project Structure: user-guide/project-structure.md
+      - Menus: user-guide/menus.md
+      - Processing Workflows: user-guide/workflows.md
+      - Reports: user-guide/reports.md
+      - Troubleshooting: user-guide/troubleshooting.md
+  - Technical Reports:
+      - Overview: technical-reports/index.md
+      - TR-001 User Guide: technical-reports/tr-001-user-guide.md
+      - TR-002 Processing Workflow: technical-reports/tr-002-processing-workflow.md
+      - TR-003 Variable Dictionary: technical-reports/tr-003-variable-dictionary.md
+      - TR-004 Validation Protocol: technical-reports/tr-004-validation-protocol.md
+      - TR-005 Output Specification: technical-reports/tr-005-output-specification.md
+      - TR-006 Software Architecture: technical-reports/tr-006-software-architecture.md
+  - Citation: citation.md
+  - Publications: publications.md
+  - Downloads: downloads.md
+  - FAQ: faq.md
+  - Changelog: changelog.md
