@@ -1,69 +1,30 @@
-﻿# Downloads
+# Downloads
 
-
-
-Download the latest version of SportsLabResearch-WIMU-DataExtractor and access the official project resources.
-
-
+Access the latest version of SportsLabResearch-WIMU-DataExtractor and its official resources.
 
 ## Software
 
-
-
 | Resource | Description |
-
 |----------|-------------|
-
-| GitHub Repository | Source code and project development. |
-
-| Latest Release | Latest stable software version. |
-
+| GitHub Repository | Source code and development. |
+| Latest Release | Current stable version. |
 | Zenodo DOI | Archived release with permanent DOI. |
-
-
 
 ## Documentation
 
-
-
-The complete documentation is available through the project website and includes:
-
-
-
 - Getting Started
-
 - User Guide
-
 - Technical Reports
-
+- Validation
 - Citation
-
 - FAQ
 
+## Validation
 
-
-## Recommended Downloads
-
-
-
-- Latest stable release.
-
-- Technical Reports.
-
-- Validation reports.
-
-- Example datasets (when available).
-
-
+[Validation Report (PDF)](validation/reports/Validation_Script_Extraction_vs_SPRO.pdf)
 
 ## Related Documentation
 
-
-
+- Validation
 - Citation
-
 - Publications
-
-- FAQ
-
-

@@ -3,7 +3,7 @@ site_description: Scientific software for extracting, standardizing, and validat
 site_url: https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/
 
 repo_name: SportsLabResearch-WIMU-DataExtractor
-repo_url: https://github.com/SportsLabResearch-WIMU-DataExtractor
+repo_url: https://github.com/SportsLabResearch/SportsLabResearch-WIMU-DataExtractor
 
 theme:
   name: material
@@ -37,6 +37,7 @@ nav:
   - Home: index.md
   - Getting Started: getting-started.md
   - Installation: installation.md
+
   - User Guide:
       - Introduction: user-guide/index.md
       - Project Structure: user-guide/project-structure.md
@@ -44,6 +45,7 @@ nav:
       - Processing Workflows: user-guide/workflows.md
       - Reports: user-guide/reports.md
       - Troubleshooting: user-guide/troubleshooting.md
+
   - Technical Reports:
       - Overview: technical-reports/index.md
       - TR-001 User Guide: technical-reports/tr-001-user-guide.md
@@ -52,9 +54,13 @@ nav:
       - TR-004 Validation Protocol: technical-reports/tr-004-validation-protocol.md
       - TR-005 Output Specification: technical-reports/tr-005-output-specification.md
       - TR-006 Software Architecture: technical-reports/tr-006-software-architecture.md
+
+  - Validation:
+      - Overview: validation/index.md
+      - Reports: validation/reports.md
+
   - Citation: citation.md
   - Publications: publications.md
   - Downloads: downloads.md
   - FAQ: faq.md
   - Changelog: changelog.md
-

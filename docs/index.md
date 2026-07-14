@@ -1,4 +1,4 @@
-﻿# SportsLabResearch-WIMU-DataExtractor
+# SportsLabResearch-WIMU-DataExtractor
 
 High-performance open-source extractor for WIMUÂ® QUL and QUI files.
 
@@ -17,4 +17,9 @@ High-performance open-source extractor for WIMUÂ® QUL and QUI files.
 Please cite the official Zenodo DOI when using this software:
 
 https://doi.org/10.5281/zenodo.21344653
+## Validation
 
+The extraction methodology has been validated against SPRO reference software.
+
+- [Validation overview](https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/validation/)
+- [Validation report (PDF)](https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/validation/reports/Validation_Script_Extraction_vs_SPRO.pdf)

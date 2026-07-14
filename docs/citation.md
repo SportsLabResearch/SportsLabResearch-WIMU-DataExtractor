@@ -26,15 +26,15 @@ https://doi.org/10.5281/zenodo.21344653
 }
 ```
 
-## Validation
-
-The extraction methodology has been scientifically validated against the SPRO reference software.
-
-- [Validation Report (PDF)](validation/reports/Validation_Script_Extraction_vs_SPRO.pdf)
-
 ## Related Documentation
 
 - Validation
 - Publications
 - Technical Reports
 - Downloads
+## Validation
+
+The extraction methodology has been validated against SPRO reference software.
+
+- [Validation overview](https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/validation/)
+- [Validation report (PDF)](https://sportslabresearch.github.io/SportsLabResearch-WIMU-DataExtractor/validation/reports/Validation_Script_Extraction_vs_SPRO.pdf)
